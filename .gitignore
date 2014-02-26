@@ -1,15 +1,7 @@
-color_generator/
-color_generator/*
-data/gu-sample/
-data/gu-samlpe/*
-data/frog/
-data/frog/*
-data/sample/
-data/sample/*
-data/leohung_sample/source/
-data/leohung_sample/source/*
 *~
 js/
 sass/
 *.py
 .DS_Store
+generator/
+generator/*

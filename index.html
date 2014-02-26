@@ -54,7 +54,7 @@
 
 
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script src="data/leohung_sample.json"></script>
+<script src="js/data.json"></script>
 <script>
 	
 	$( function (){
@@ -70,6 +70,7 @@
 				text += '<div class="box" style="background-color :'+color+'" ></div>';
 			}
 			text += '</div>';
+			text += '<div class="pic-author">'+item.author_name+'</div>';
 			text += '</div>';
 			$("div.pics").append( text );
 			$("div.loading").hide();
