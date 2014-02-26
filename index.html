@@ -56,7 +56,10 @@
 			$("div.loading").hide();
 		}
 
+/*
 		$(".pic-container").hover( function(){ $(this).fadeTo("fast", 1);}, function(){ $(this).fadeTo("fast", .4)} );
+*/
+		$(".pic-container").click( function(){ $(".pic-container").removeClass("pic-active"); $(this).addClass("pic-active"); } );
 
 		$(".pic-container").click( function(){  
 			var i = parseInt( $(this).attr("data-index"));
