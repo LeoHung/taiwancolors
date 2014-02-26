@@ -1,0 +1,169 @@
+
+body {
+	background-color: #eee;
+	overflow-y: scroll;
+}
+
+div.loading {
+	text-align: center;
+}
+
+@media screen and (min-width: 1330px ){
+	div.container {
+		width: 1080px;
+	}
+}
+
+@media screen and (min-width:1010px ) and (max-width: 1330px ){
+	div.container {
+		width: 810px;
+	}
+}
+
+@media  (min-width:740px ) and ( max-width: 1010px){
+	div.container{
+		width: 540px;
+	}
+}
+
+@media ( min-width:470px ) and ( max-width: 780px){
+	div.container{
+		width: 270px;
+	}
+}
+
+@media (max-width: 470px ){
+	div.container{
+		margin: auto;
+		width: 270px;
+		padding-top: 30px;
+	}
+	div.nav {
+		display: none;
+	}
+}
+@media ( min-width: 470px ){
+	div.nav {
+		background-color: #666;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 200px;
+		height: 100%;
+		/*margin-right: 20px ;*/
+		text-align: center;
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-position: right;
+
+	}
+}
+
+div.nav h2 {
+	color: #fff; 
+}
+
+div.nav-title {
+	margin-top: 10px;
+	font-size: 32px;
+	line-height: 32px;
+	color: #fff;
+}
+
+div.nav-palatte {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #eee;
+}
+
+div.nav-box:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+div.nav-box {
+	width: 100%;
+	margin: auto;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+	line-height: 20px;
+	font-family: monospace;
+	color: #FFF;
+	height: 40px;
+
+}
+
+div.nav-footer {
+	padding-top: 20px;
+	font-size: 12px;
+	color: #fff;
+}
+
+div.nav-footer a{
+	color: #fff;
+}
+div.nav-footer a:hover{
+	color: red;
+}
+
+
+/*
+div.pic-container:hover {
+	opacity: 1;
+}
+*/
+div.pic-container {
+	float:left ;
+	width: 240px;
+	background-color: #ffffff ;
+	margin: 5px;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	opacity: 0.4;
+}
+
+div.pic-title {
+	width: 100% ;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+div.pic-title .title-text{
+	font-size: 30px;
+	line-height: 30px;
+}
+
+
+
+div.pic-pic {
+}
+div.pic-pic img {
+	max-width: 100%;
+}
+
+div.palatte {
+	height: 100%;
+}
+div.box:before {
+	content:'';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	width: 0;
+}
+
+div.box {
+	display: inline-block;
+	vertical-align: middle;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	color: #FFF;
+	font-family: monospace;
+}
+

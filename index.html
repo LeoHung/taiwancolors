@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Taiwan Colors. 台灣本色</title>
+<!-- for Google -->
+<meta name="description" content="The Colors in Tawian." />
+<meta name="keywords" content="color,taiwan" />
+<meta name="author" content="Leo Hung" />
+<meta name="copyright" content="Leo Hung" />
+
+<!-- for Facebook -->          
+<meta property="og:title" content="Taiwan colors. 台灣本色" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="http://leohung.net/taiwancolors" />
+<meta property="og:description" content="The Colors in Tawian." />
+
+
+<link rel=stylesheet type="text/css" href="css/index_grid.css">
+</head>
+<body>
+<div class="nav">
+	<div class="nav-palatte"></div>
+	<div class="nav-title"></div>
+	<div class="nav-footer">Created by <a href="http://leohung.net">Leo Hung</a></div>
+	</div>
+
+</div>
+<div class="container">
+	<div class="loading">
+		<h1>Loading....</h1>
+	</div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="data/leohung_sample.json"></script>
+<script>
+	
+	$( function (){
+		for( var i = 0; i< sample.length ;i++ ){
+			var item = sample[i];
+			var text = "";
+			text += '<div class="pic-container" data-index="'+i+'">';
+			text += '<div class="pic-title"><span class="title-text">'+item.title+'</span></div>';
+			text += '<div class="pic-pic"><img class="pic" src="'+item.thumbnail_filename+'"> </div>';
+			text += '<div class="palatte">';
+			for( var j= 0; j < item.colors.length; j++){
+				var color = item.colors[j];
+				text += '<div class="box" style="background-color :'+color+'" ></div>';
+			}
+			text += '</div>';
+			text += '</div>';
+			$("div.container").append( text );
+			$("div.loading").hide();
+		}
+
+		$(".pic-container").hover( function(){ $(this).fadeTo("fast", 1);}, function(){ $(this).fadeTo("fast", .4)} );
+
+		$(".pic-container").click( function(){  
+			var i = parseInt( $(this).attr("data-index"));
+			var item = sample[i];
+			$(".nav-title").html(item.title );
+			var text ="";
+			for( var j = 0 ; j < item.colors.length ; j++){
+				var color = item.colors[j];
+				text += '<div class="nav-box" style="background-color :'+color+'">'+color+'</div>';
+			}
+			$(".nav-palatte").html( text );
+			$(".nav").css("background-image", "url("+item.col_filename+")" );
+
+		});
+
+		// random click a pic-container 
+		var random = Math.round(Math.random() * $(".pic-container").length); 
+		$(".pic-container").eq( random).trigger("click");
+
+	});
+
+</script>
+
+</body>
+</html>
