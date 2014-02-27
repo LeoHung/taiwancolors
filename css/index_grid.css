@@ -51,6 +51,9 @@ div.loading {
 	div.nav-title {
 		display: none;
 	}
+	div.pic-container {
+		opacity: 1 !important;
+	}
 
 }
 @media ( min-width: 470px ){
@@ -66,7 +69,6 @@ div.loading {
 		background-repeat:no-repeat;
 		background-attachment:fixed;
 		background-position: right;
-
 	}
 }
 
@@ -82,7 +84,7 @@ div.nav-title {
 }
 
 div.nav-palatte {
-	padding-top: 20px;
+
 	padding-bottom: 20px;
 	background-color: #eee;
 }
