@@ -25,9 +25,11 @@
 <div class="nav">
 	<div class="nav-palatte"></div>
 	<div class="nav-title"></div>
-	<div class="nav-footer"> TaiwanColors2014<br> Created by <a href="http://leohung.net">Leo Hung</a></div>
-	</div>
 
+	<div class= "nav-bottom">
+		<div class="nav-brand"><img src="img/brand.png"></div>
+		<div class="nav-footer"> TaiwanColors2014<br> By <a href="http://leohung.net" target="_blank">Leo Hung</a> & <a href="https://github.com/dannvix" target="_blank">Shao-Chung Chen</a></div>
+	</div>
 </div>
 <div class="container">
 	<div class="loading">
@@ -70,7 +72,7 @@
 				text += '<div class="box" style="background-color :'+color+'" ></div>';
 			}
 			text += '</div>';
-			text += '<div class="pic-author">'+item.author_name+'</div>';
+			text += '<div class="pic-author">Photo by '+ item.author_name+'</div>';
 			text += '</div>';
 			$("div.pics").append( text );
 			$("div.loading").hide();

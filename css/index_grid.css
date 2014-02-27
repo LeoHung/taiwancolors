@@ -76,6 +76,8 @@ div.nav-palatte {
 	background-color: #eee;
 }
 
+
+
 div.nav-box:before {
 	content: '';
 	display: inline-block;
@@ -97,18 +99,25 @@ div.nav-box {
 }
 
 div.nav-footer {
-	padding-top: 20px;
 	font-size: 12px;
-	color: #fff;
 }
 
-div.nav-footer a{
-	color: #fff;
-}
-div.nav-footer a:hover{
+div.nav-footer a:hover a:active{ 
 	color: red;
 }
 
+div.nav-footer a:visited {
+	color: black;
+ }
+
+div.nav-bottom {
+	color : black;
+	bottom: 30px;
+	position: absolute;
+	text-align: center;
+	width: 100%	;
+	font-family: Times;
+}
 
 /*
 div.pic-container:hover {
@@ -128,6 +137,7 @@ div.pic-container {
 	-webkit-transition:opacity .5s; /* For Safari 3.1 to 6.0 */
 	transition:opacity .5s;
 }
+
 
 div.pic-container:hover {
 	opacity: 1;
